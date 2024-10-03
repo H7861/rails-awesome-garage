@@ -1,0 +1,22 @@
+<h1>This is show page </h1>
+
+<h1><%= @car.brand %> <%= @car.model %> (<%= @car.year %>)</h1>
+
+<p><strong>Fuel:</strong> <%= @car.fuel %></p>
+<p><strong>Owner:</strong> <%= @car.owner.nickname %></p>
+
+<h3>Reviews:</h3>
+<ul>
+  <% @car.reviews.each do |review| %>
+    <li><strong>Rating:</strong> <%= review.rating %> - <%= review.comment %></li>
+  <% end %>
+</ul>
+
+<h3>Favourited by Owners:</h3>
+<ul>
+  <% @car.favourites.each do |favourite| %>
+    <li><%= favourite.owner.nickname %></li>
+  <% end %>
+</ul>
+
+<%= link_to 'Back to All Cars', cars_path %>
