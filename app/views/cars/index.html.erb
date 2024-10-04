@@ -1,4 +1,8 @@
-  <h1>Here are the cars below.</h1>
+<%# Display all the cars with their brand and model %>
 <% @cars.each do |car| %>
-  <p><%= link_to car.model, car_path(car) %></p>
+  <h2><%= car.brand %></h2>
+  <h3><%= car.model %></h3>
+  <p><%= car.created_at.strftime("%a %b %e at %l%M %p") %></p>
+  <div><%= car.owner.nickname %></div>
+  <%= link_to "More details", car_path(car) %>
 <% end %>

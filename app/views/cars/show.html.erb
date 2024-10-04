@@ -1,4 +1,4 @@
-<h1>This is show page </h1>
+<h1>This shows the cars specs</h1>
 
 <h1><%= @car.brand %> <%= @car.model %> (<%= @car.year %>)</h1>
 
@@ -7,15 +7,23 @@
 
 <h3>Reviews:</h3>
 <ul>
-  <% @car.reviews.each do |review| %>
-    <li><strong>Rating:</strong> <%= review.rating %> - <%= review.comment %></li>
+  <% if @car.reviews.any? %>
+    <% @car.reviews.each do |review| %>
+      <li><strong>Rating:</strong> <%= review.rating %> - <%= review.comment %></li>
+    <% end %>
+  <% else %>
+    <li>No reviews available for this car.</li>
   <% end %>
 </ul>
 
 <h3>Favourited by Owners:</h3>
 <ul>
-  <% @car.favourites.each do |favourite| %>
-    <li><%= favourite.owner.nickname %></li>
+  <% if @car.favourites.any? %>
+    <% @car.favourites.each do |favourite| %>
+      <li><%= favourite.owner.nickname %></li>
+    <% end %>
+  <% else %>
+    <li>No owners have favourited this car yet.</li>
   <% end %>
 </ul>
 
