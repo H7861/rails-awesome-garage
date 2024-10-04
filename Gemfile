@@ -69,3 +69,6 @@ group :test do
 end
 
 gem 'faker'
+gem "bootstrap", "~> 5.2"
+gem "font-awesome-sass", "~> 6.1"
+gem "simple_form"
