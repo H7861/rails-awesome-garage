@@ -24,7 +24,14 @@ gem "turbo-rails"
 gem "stimulus-rails"
 
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
+
 gem "jbuilder"
+gem 'faker'
+gem "bootstrap", "~> 5.2"
+gem "font-awesome-sass", "~> 6.1"
+gem "simple_form"
+gem "autoprefixer-rails"
+gem "sassc-rails"
 
 # Use Redis adapter to run Action Cable in production
 # gem "redis", ">= 4.0.1"
@@ -67,8 +74,3 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
 end
-
-gem 'faker'
-gem "bootstrap", "~> 5.2"
-gem "font-awesome-sass", "~> 6.1"
-gem "simple_form"

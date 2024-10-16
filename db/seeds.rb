@@ -43,22 +43,22 @@ end
 cars = Car.all
 
 # Seed Reviews
-puts 'Seeding reviews...'
-100.times do
-  Review.create!(
-    comment: Faker::Lorem.sentence(word_count: 10),
-    rating: rand(1..5),
-    car: cars.sample
-  )
-end
+# puts 'Seeding reviews...'
+# 100.times do
+#   Review.create!(
+#     comment: Faker::Lorem.sentence(word_count: 10),
+#     rating: rand(1..5),
+#     car: cars.sample
+#   )
+# end
 
-# Seed Favourites
-puts 'Seeding favourites...'
-50.times do
-  Favourite.create!(
-    car: cars.sample
-  )
-end
+# # Seed Favourites
+# puts 'Seeding favourites...'
+# 50.times do
+#   Favourite.create!(
+#     car: cars.sample
+#   )
+# end
 
 # Fix: Change `owner.all` to `owners` to get the correct count of owners created
 puts "Seeding completed! #{owners.count} owners created!"
